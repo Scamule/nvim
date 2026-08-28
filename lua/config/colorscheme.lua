@@ -1,10 +1,4 @@
-local tokyo_status, tokyo = pcall(require, "tokyonight")
-if not tokyo_status then
-  print("Could not require tokyonight")
-  return
-end
-
-tokyo.setup({
+require("tokyonight").setup({
   -- or leave it empty to use the default settings
   style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
@@ -34,7 +28,7 @@ tokyo.setup({
     colors.bg = "#282828"
     colors.fg = "#dbdbdb"
     colors.comment = "#686868"
-    colors.hint = "#a8a8a8"
+    colors.hint = "#bbbbbb"
   end,
 
   --- You can override specific highlights to use other groups or a hex color
@@ -44,13 +38,8 @@ tokyo.setup({
   on_highlights = function(highlights, colors) end,
 })
 
-local vim_status, _ = pcall(vim.cmd, "colorscheme tokyonight")
-if not vim_status then
-    print("tokyodark color scheme may not be installed")
-    return
-end
+vim.cmd[[colorscheme tokyonight]]
 
 -- Other colors not used by tokyonight
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#a8a8a8" })
-vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg ="#b0b0b0" })
-
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#a8a8a8", bg = "#181818" })
+vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg="#a0a0a0" })

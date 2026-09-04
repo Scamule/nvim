@@ -18,5 +18,10 @@ vim.opt.cursorline = false
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
+-- Wrapping text
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.list = false
+
 -- Runtime Path Stuff
 vim.opt.rtp:append("/Users/samhigh/.local/share/nvim/site/")

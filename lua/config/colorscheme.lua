@@ -35,11 +35,16 @@ require("tokyonight").setup({
   --- function will be called with a Highlights and ColorScheme table
   ---@param highlights Highlights
   ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
+  on_highlights = function(highlights, colors)
+    -- For the cursor
+    highlights.LineNr = { fg = "#dddddd", bg = "#181818", bold=true }
+    -- The other numbers
+    highlights.LineNrAbove = { fg = "#cacaca", bg = "#202020", bold = true }
+    highlights.LineNrBelow = { fg = "#cacaca", bg = "#202020", bold = true }
+  end,
 })
 
 vim.cmd[[colorscheme tokyonight]]
 
 -- Other colors not used by tokyonight
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#a8a8a8", bg = "#181818" })
 vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg="#a0a0a0" })

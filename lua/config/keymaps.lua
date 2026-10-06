@@ -66,10 +66,9 @@ vim.keymap.set("n", "gl", function()
   print("Left gutter warnings " .. (not current and "on" or "off"))
 end,
 { desc = "Toggle left gutter warnings" })
-
 vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, { desc = "Next diagnostic" })
 vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, { desc = "Previous diagnostic" })
-vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, { desc = "Go to function definition" })
+vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, { desc = "Go to definition" })
 vim.keymap.set("n", "gf", function() vim.diagnostic.open_float() end, { desc = "Opens floating warning description window" })
 vim.keymap.set("n", "ga", function() vim.lsp.buf.code_action() end, { desc = "Executes a code action under cursor" })
 vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, { desc = "Displays a markdown floating box showing type information and documentation" })

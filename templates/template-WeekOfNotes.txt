@@ -1,0 +1,11 @@
+Months:
+January, February, March, April, May, June, July, August, September, October, November, December
+
+Macro for after you are done with text (@q):
+{{macro}}G2kVGy4P3jVGg3kkdgg
+ 
+Format:
+Month Day, Year: 8 hours
+
+{{cursor}}, 2026: 8 hours
+- 

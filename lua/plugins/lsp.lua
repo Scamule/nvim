@@ -63,7 +63,7 @@ return {
           capabilities = capabilities,
         })
         vim.lsp.enable(server)
-      end -- end for
+      end
 
     end, -- config end
   },

@@ -36,11 +36,18 @@ require("tokyonight").setup({
   ---@param highlights Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors)
+    ---- This is darker color
     -- For the cursor
-    highlights.LineNr = { fg = "#dddddd", bg = "#181818", bold=true }
+    highlights.LineNr = { fg = "#686868", bold = true }
     -- The other numbers
-    highlights.LineNrAbove = { fg = "#cacaca", bg = "#202020", bold = true }
-    highlights.LineNrBelow = { fg = "#cacaca", bg = "#202020", bold = true }
+    highlights.LineNrAbove = { fg = "#686868", bold = true }
+    highlights.LineNrBelow = { fg = "#686868", bold = true }
+    ---- This is for more contast color
+    -- -- For the cursor
+    -- highlights.LineNr = { fg = "#dddddd", bg = "#181818", bold = true }
+    -- -- The other numbers
+    -- highlights.LineNrAbove = { fg = "#cacaca", bg = "#202020", bold = true }
+    -- highlights.LineNrBelow = { fg = "#cacaca", bg = "#202020", bold = true }
   end,
 })
 

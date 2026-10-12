@@ -25,8 +25,8 @@ vim.keymap.set("n", "<C-w>.", "<C-w>>", { desc = "Increases window width" })
 vim.keymap.set("n", "<C-w>\\", "<C-w>=", { desc = "Equalizes window size" })
 vim.keymap.set("n", "<C-\\><C-\\>", ":bd<CR>", { desc = "Delete current buffer" })
 -- Buffer commands
-vim.keymap.set("n", "<S-l>", ":bn<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<S-h>", ":bp<CR>", { desc = "Previous buffer" })
+-- vim.keymap.set("n", "<S-l>", ":bn<CR>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<S-h>", ":bp<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<C-\\><C-\\>", ":bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("t", "<C-\\><C-\\>", ":bd!<CR>", { desc = "Delete current terminal buffer" })
 
@@ -72,6 +72,12 @@ vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, { desc = "Go 
 vim.keymap.set("n", "gf", function() vim.diagnostic.open_float() end, { desc = "Opens floating warning description window" })
 vim.keymap.set("n", "ga", function() vim.lsp.buf.code_action() end, { desc = "Executes a code action under cursor" })
 vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, { desc = "Displays a markdown floating box showing type information and documentation" })
+
+-- Bufferline commands
+vim.keymap.set("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", { desc = "Cycle to next buffer in the bufferline" })
+vim.keymap.set("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>", { desc = "Cycle to previous buffer in the bufferline" })
+vim.keymap.set("n", "<C-l>", "<CMD>BufferLineMoveNext<CR>", { desc = "Move the current buffer to the right" })
+vim.keymap.set("n", "<C-h>", "<CMD>BufferLineMovePrev<CR>", { desc = "Move the current buffer to the left" })
 
 ----- Custom commands -----
 ---- Wrapping HTML commands

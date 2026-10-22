@@ -29,23 +29,23 @@ vim.opt.list = false
 vim.opt.rtp:append("/Users/samhigh/.local/share/nvim/site/")
 
 ---- Terminal stuff
-local term_group = vim.api.nvim_create_augroup("TerminalSettings", { clear = true })
-
--- Enter insert mode when opening a new terminal
-vim.api.nvim_create_autocmd("TermOpen", {
-  group = term_group,
-  command = "startinsert",
-})
-
--- Enter insert mode when focusing or switching back to a terminal window
-vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" }, {
-  group = term_group,
-  callback = function()
-    if vim.bo.buftype == "terminal" then
-      vim.cmd("startinsert")
-    end
-  end,
-})
+-- local term_group = vim.api.nvim_create_augroup("TerminalSettings", { clear = true })
+-- 
+-- -- Enter insert mode when opening a new terminal
+-- vim.api.nvim_create_autocmd("TermOpen", {
+--   group = term_group,
+--   command = "startinsert",
+-- })
+-- 
+-- -- Enter insert mode when focusing or switching back to a terminal window
+-- vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" }, {
+--   group = term_group,
+--   callback = function()
+--     if vim.bo.buftype == "terminal" then
+--       vim.cmd("startinsert")
+--     end
+--   end,
+-- })
 
 ---- Templates for different files types
 config_directory = vim.fn.stdpath("config")
@@ -80,7 +80,6 @@ local function load_template(extension)
     end
   })
 end
-
 --- Loads all templates in the templates directory
 local function load_templates()
   local templates_string = vim.fn.system("ls -1 " .. config_directory .. "/templates")

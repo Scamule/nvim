@@ -21,6 +21,8 @@ return {
         buffer_selected = {
           fg = "#cacaca", 
           bg = "#282828",
+          bold = true,
+          italic = false,
         },
         background = {
           fg = "#686868", 
@@ -33,6 +35,31 @@ return {
         separator = {
           fg = "#202020", 
           bg = "#202020",
+        },
+        modified = {
+          fg = "#686868",
+          bg = "#202020",
+        },
+        modified_visible = {
+          fg = "#686868",
+          bg = "#202020",
+        },
+        modified_selected = {
+          fg = "#cacaca",
+          bg = "#282828",
+        },
+        duplicate = {
+          fg = "#686868",
+          bg = "#202020",
+        },
+        duplicate_visible = {
+          fg = "#686868",
+          bg = "#202020",
+        },
+        duplicate_selected = {
+          fg = "#cacaca",
+          bg = "#282828",
+          bold = false,
         },
       },
     }

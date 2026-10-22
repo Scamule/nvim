@@ -16,7 +16,7 @@ vim.keymap.set("n", "<LEADER>p", "<CMD>Ex<CR>", { desc = "Opens file explorer" }
 
 -- Terminal commands
 -- vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { desc = "Window swapping from terminal" })
+-- vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { desc = "Window swapping from terminal" })
 
 -- Window resizing commands because using + with shift sucks
 vim.keymap.set("n", "<C-w>=", "<C-w>+", { desc = "Increases window height" })

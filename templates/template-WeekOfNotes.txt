@@ -2,7 +2,7 @@ Months:
 January, February, March, April, May, June, July, August, September, October, November, December
 
 Macro for after you are done with text (@q):
-{{macro}}G2kVGy4P3jVGg3kkdgg
+{{macro}}G2kVGy4P3jVGg4kdgg
  
 Format:
 Month Day, Year: 8 hours

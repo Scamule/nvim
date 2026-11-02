@@ -187,7 +187,7 @@ start_spinner() {
   (
     while true; do
       for frame in "${frames[@]}"; do
-        printf "\r[$frame] $text$SC"
+        printf "\r[$frame] $text"
         sleep 0.1
       done
     done

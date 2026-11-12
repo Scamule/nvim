@@ -28,6 +28,12 @@ vim.opt.list = false
 ---- Runtime path stuff
 vim.opt.rtp:append("/Users/samhigh/.local/share/nvim/site/")
 
+---- Runtime LSP stuff
+-- ftplugin/markdown.vim likes to check if the file is markdown and adjust tabstop to 4, NO LIKE!
+-- This value below makes that check false and it never reset tabstop
+vim.g.markdown_recommended_style = 0
+
+
 ---- Terminal stuff
 -- local term_group = vim.api.nvim_create_augroup("TerminalSettings", { clear = true })
 -- 
@@ -50,7 +56,7 @@ vim.opt.rtp:append("/Users/samhigh/.local/share/nvim/site/")
 ---- Templates for different files types
 config_directory = vim.fn.stdpath("config")
 --- Creates template for given file extension
----@param extension string
+---@param extension string the extension to add the template for
 local function load_template(extension)
   vim.api.nvim_create_autocmd("BufNewFile", {
     pattern = "*" .. extension,
